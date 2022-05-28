@@ -8,5 +8,6 @@ export const theme = {
 
         text_primary: '#F4F4F5',
         text_secondary: '#A1A1AA',
+        text_tertiary: "#4799eb"
     }
 }

@@ -1,0 +1,31 @@
+.nav {
+    @apply max-w-5xl m-auto bg-[#27272A] flex justify-between gap-4 items-center py-1;
+}
+
+.nav h1 {
+    @apply text-[24px];
+}
+
+.navbarContent {
+    @apply flex justify-between w-full items-center;
+}
+
+.navbarContent li a{
+    @apply text-[#A1A1AA] hover:text-[#F4F4F5] text-[15px];
+}
+
+.buttonsContent {
+    @apply flex items-center gap-4;
+}
+
+.registerButton {
+    @apply text-[#4799eb] border-2 p-3 rounded-md border-[#4799eb] hover:text-[#FFFFFF] hover:border-[#FFFFFF]
+}
+
+.loginButton {
+    @apply text-[#A1A1AA] hover:text-[#F4F4F5]
+}
+
+.searchButton {
+    @apply text-[#A1A1AA] hover:text-[#F4F4F5]
+}
