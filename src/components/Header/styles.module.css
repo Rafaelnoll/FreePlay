@@ -1,3 +1,32 @@
 .header{
-    @apply w-full bg-[#27272A]
+    @apply w-full bg-header-bg-image bg-no-repeat bg-[#1c1e22] bg-top;
+}
+
+.headerContent{
+    @apply max-w-5xl m-auto text-center py-12 px-8;
+}
+
+.headerContent h1{
+    @apply text-3xl text-[#A1A1AA] mb-2;
+}
+
+.headerContent h2{
+    @apply text-lg text-[#7a8288] mb-4;
+}
+
+.headerContent span{
+    color: #4799eb;
+}
+
+.headerButtonsContainer{
+    @apply mb-2;
+}
+
+.beginButton{
+    @apply text-[#FFFFFF] text-[15px] font-bold bg-[#4799eb] py-3 px-4 my-2 mr-2;
+    @apply border-2 border-[#4799eb] rounded-md hover:bg-[#3776b4] hover:border-[#3776b4];
+}
+
+.browseGamesButton{
+    @apply text-[#7a8288] border-2 p-3 rounded-md border-[#7a8288] hover:text-[#FFFFFF] hover:border-[#FFFFFF]
 }

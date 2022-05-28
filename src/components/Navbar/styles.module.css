@@ -1,5 +1,9 @@
-.nav {
-    @apply max-w-5xl m-auto bg-[#27272A] flex justify-between gap-4 items-center py-1;
+.nav{
+    @apply bg-[#27272A] fixed w-full top-0 block;
+}
+
+.navbarContainer {
+    @apply max-w-5xl m-auto bg-[#27272A] flex justify-between gap-4 items-center py-1 shadow-md; 
 }
 
 .nav h1 {

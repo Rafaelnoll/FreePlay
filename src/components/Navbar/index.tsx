@@ -8,27 +8,29 @@ import styles from "./styles.module.css";
 const Navbar: NextPage = () => {
     return (
         <nav className={styles.nav}>
-            <Link href="/">
-                <a><h1>PlayFree</h1></a>
-            </Link>
-            <div className={styles.navbarContent}>
-                <ul>
-                    <li>
-                        <Link href="/games">
-                            <a>Games List</a>
+            <div className={styles.navbarContainer}>
+                <Link href="/">
+                    <a><h1>PlayFree</h1></a>
+                </Link>
+                <div className={styles.navbarContent}>
+                    <ul>
+                        <li>
+                            <Link href="/games">
+                                <a>Games List</a>
+                            </Link>
+                        </li>
+                    </ul>
+                    <div className={styles.buttonsContent}>
+                        <Link href="/search">
+                            <a className={styles.searchButton}><MagnifyingGlass weight="bold" size={18} /></a>
                         </Link>
-                    </li>
-                </ul>
-                <div className={styles.buttonsContent}>
-                    <Link href="/search">
-                        <a className={styles.searchButton}><MagnifyingGlass weight="bold" size={18} /></a>
-                    </Link>
-                    <Link href="/login">
-                        <a className={styles.loginButton}>Log In</a>
-                    </Link>
-                    <Link href="/register">
-                        <a className={styles.registerButton}>Join Free</a>
-                    </Link>
+                        <Link href="/login">
+                            <a className={styles.loginButton}>Log In</a>
+                        </Link>
+                        <Link href="/register">
+                            <a className={styles.registerButton}>Join Free</a>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </nav>

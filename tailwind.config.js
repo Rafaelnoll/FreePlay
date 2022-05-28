@@ -10,6 +10,9 @@ module.exports = {
           300: "#996DFF",
           500: "#8257e6"
         }
+      },
+      backgroundImage: {
+        "header-bg-image": "url('https://www.freetogame.com/assets/images/paladins.png')"
       }
     },
   },
