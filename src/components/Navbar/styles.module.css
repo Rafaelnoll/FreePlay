@@ -1,5 +1,5 @@
 .nav{
-    @apply bg-[#27272A] fixed w-full top-0 block;
+    @apply bg-[#27272A] fixed w-full top-0 block z-[999];
 }
 
 .navbarContainer {

@@ -15,7 +15,7 @@
 }
 
 .headerContent span{
-    color: #4799eb;
+    @apply text-[#4799eb] font-[600];
 }
 
 .headerButtonsContainer{

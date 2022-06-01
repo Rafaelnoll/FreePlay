@@ -1,0 +1,21 @@
+.gameCard {
+    @apply w-full md:max-w-[356px] mb-6 border-transparent rounded drop-shadow-md cursor-pointer;
+    @apply transition-all hover:scale-[1.02] hover:drop-shadow-xl; 
+}
+
+.gameCard img {
+    @apply rounded-t w-full;
+}
+
+.gameCardBody{
+    @apply bg-[#32383e] text-[#A1A1AA] rounded-b px-5 py-3;
+    @apply flex items-center justify-between
+}
+
+.gameCardBody h4{
+    @apply text-[19px] font-[500]
+}
+
+.gameCardBody span{
+    @apply bg-[#4799eb] text-[#fff] text-[11px] font-[700] p-2 rounded uppercase
+}
