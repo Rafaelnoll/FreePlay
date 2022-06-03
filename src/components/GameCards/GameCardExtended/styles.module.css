@@ -1,0 +1,45 @@
+.gameCardExtended {
+    @apply max-w-[693px] px-5 py-3 bg-[#32383e] rounded cursor-pointer;
+    @apply drop-shadow-md transition-all hover:scale-[1.02] hover:drop-shadow-xl;
+}
+
+.gameCardExtendeBody {
+    @apply flex items-center justify-between;
+}
+
+.gameCardExtendeBody img {
+    @apply max-w-[100px] md:max-w-[160px] rounded;
+}
+
+.gameCardExtendedInfos {
+    @apply px-[10px] flex flex-col w-1/2 md:w-3/5;
+}
+
+.gameCardExtendedInfos h4 {
+    @apply text-[#A1A1AA] text-[19px] font-[510] mb-1 shadow-sm overflow-hidden text-ellipsis;
+}
+
+.gameCardExtendedInfos ul{
+    @apply flex
+}
+
+.gameCardExtendedInfos li {
+    @apply bg-[#7a8288] rounded text-[11px] font-bold mr-2 px-[4.5px] py-[2.8px]
+}
+
+.gameCardDescription {
+    @apply text-[15px] text-[#7a8288] mb-1 whitespace-nowrap overflow-hidden text-ellipsis
+}
+
+.gameCardPlataformType{
+    display: none;
+    @apply sm:block
+}
+
+.gameCardPrice{
+    @apply sm:px-[10px]
+}
+
+.gameCardPrice span{
+    @apply bg-[#4799eb] text-[#fff] text-[11px] font-[700] p-2 rounded uppercase;
+}

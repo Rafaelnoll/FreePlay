@@ -9,11 +9,11 @@
 
 .gameCardBody{
     @apply bg-[#32383e] text-[#A1A1AA] rounded-b px-5 py-3;
-    @apply flex items-center justify-between
+    @apply flex items-center justify-between;
 }
 
 .gameCardBody h4{
-    @apply text-[19px] font-[500]
+    @apply text-[19px] font-[500] overflow-hidden whitespace-nowrap text-ellipsis
 }
 
 .gameCardBody span{
