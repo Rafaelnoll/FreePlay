@@ -1,5 +1,5 @@
 .gameCardExtended {
-    @apply max-w-[693px] px-5 py-3 bg-[#32383e] rounded cursor-pointer;
+    @apply max-w-[693px] mb-3 px-5 py-3 bg-[#32383e] rounded cursor-pointer;
     @apply drop-shadow-md transition-all hover:scale-[1.02] hover:drop-shadow-xl;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .gameCardExtendedInfos h4 {
-    @apply text-[#A1A1AA] text-[19px] font-[510] mb-1 shadow-sm overflow-hidden text-ellipsis;
+    @apply text-[#A1A1AA] text-[19px] font-[510] mb-1 shadow-sm overflow-hidden text-ellipsis whitespace-nowrap;
 }
 
 .gameCardExtendedInfos ul{
