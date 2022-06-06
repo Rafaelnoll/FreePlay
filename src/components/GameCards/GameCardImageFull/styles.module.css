@@ -1,0 +1,13 @@
+.gameCardImageFull{
+    @apply max-w-[360px] mb-6 relative cursor-pointer;
+    @apply drop-shadow-md transition-all hover:scale-[1.02] hover:drop-shadow-xl;
+}
+
+.gameCardImageFull img {
+    @apply rounded;
+}
+
+.gameCardImageFull span{
+    @apply bg-[#4799eb] text-[#fff] text-[11px] font-[700] p-2 rounded uppercase;
+    @apply absolute bottom-2 right-2
+}
