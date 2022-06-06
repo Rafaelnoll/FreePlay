@@ -1,5 +1,5 @@
 .gameCardExtended {
-    @apply max-w-[693px] mb-3 px-5 py-3 bg-[#32383e] rounded cursor-pointer;
+    @apply w-full mb-3 px-5 py-3 bg-[#32383e] rounded cursor-pointer;
     @apply drop-shadow-md transition-all hover:scale-[1.02] hover:drop-shadow-xl;
 }
 
@@ -33,7 +33,7 @@
 
 .gameCardPlataformType{
     display: none;
-    @apply sm:block
+    @apply lg:block
 }
 
 .gameCardPrice{

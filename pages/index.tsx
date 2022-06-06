@@ -6,6 +6,7 @@ import GameCard from '../src/components/GameCards/GameCard';
 import GameCardExtended from '../src/components/GameCards/GameCardExtended';
 
 import api from "../src/libs/api";
+import GameCardImageFull from "../src/components/GameCards/GameCardImageFull";
 
 const recommendedGames = [
   {
@@ -53,30 +54,39 @@ const Home: NextPage = () => {
       <main className="py-12">
         <div className="md:max-w-6xl max-w-lg m-auto px-4">
           <h3 className="flex items-center text-[#A1A1AA] gap-1 text-[24px] font-[500] mb-2"><Robot size={32} weight="fill" />Recomendações personalizadas</h3>
-          <div className='flex w-full md:gap-4 flex-wrap md:flex-nowrap items-center'>
+          <div className='flex w-full md:gap-4 flex-wrap md:flex-nowrap justify-between items-center'>
             {recommendedGames.map((game) => {
               return <GameCard key={game.name} name={game.name} imageURL={game.cardImageURL} />
             })}
           </div>
         </div>
         <div>
-          <div className='md:max-w-6xl max-w-lg m-auto px-4'>
-            <h3 className='text-[#A1A1AA] gap-1 text-[24px] font-[500] mb-2'>Adicionados recentemente</h3>
-            <ul className="flex flex-col">
-              {recentlyAddedGames.map((game: RecentlyAddedGamesTypes) => {
-                return (
-                  <li key={game.id} className="max-w-[693px]">
-                    <GameCardExtended
-                      name={game.title}
-                      imageURL={game.thumbnail}
-                      descrition={game.short_description}
-                      genre={game.genre}
-                      gameURL={game.game_url}
-                    />
-                  </li>
-                )
-              })}
-            </ul>
+          <div className='flex flex-col md:flex-row justify-between gap-5 md:max-w-6xl max-w-lg m-auto px-4'>
+            <div className="md:w-2/3">
+              <h3 className='text-[#A1A1AA] gap-1 text-[24px] font-[500] mb-2'>Adicionados recentemente</h3>
+              <ul className="flex flex-col">
+                {recentlyAddedGames.map((game: RecentlyAddedGamesTypes) => {
+                  return (
+                    <li key={game.id}>
+                      <GameCardExtended
+                        name={game.title}
+                        imageURL={game.thumbnail}
+                        descrition={game.short_description}
+                        genre={game.genre}
+                        gameURL={game.game_url}
+                      />
+                    </li>
+                  )
+                })}
+              </ul>
+            </div>
+            <div>
+              <h3 className='text-[#A1A1AA] gap-1 text-[24px] font-[500] mb-2'>Mais jogados</h3>
+              <GameCardImageFull imageURL="https://www.freetogame.com/g/4/thumbnail.jpg"/>
+              <GameCardImageFull imageURL="https://www.freetogame.com/g/4/thumbnail.jpg"/>
+              <GameCardImageFull imageURL="https://www.freetogame.com/g/4/thumbnail.jpg"/>
+              <GameCardImageFull imageURL="https://www.freetogame.com/g/4/thumbnail.jpg"/>
+            </div>
           </div>
         </div>
       </main>
