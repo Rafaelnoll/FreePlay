@@ -23,7 +23,7 @@ const recommendedGames = [
   }
 ]
 
-interface RecentlyAddedGamesTypes {
+interface GamesTypes {
   game_url: string;
   id: number;
   short_description: string;
@@ -33,15 +33,26 @@ interface RecentlyAddedGamesTypes {
 }
 
 const Home: NextPage = () => {
-  const [recentlyAddedGames, setrecentlyAddedGames] = useState([]);
+  const [recentlyAddedGames, setRecentlyAddedGames] = useState([]);
+  const [mostPlayedGames, setMostPlayedGames] = useState([]);
 
   useEffect(() => {
+
     api.get("/games")
       .then((response) => {
         const data = response.data;
         const lastGamesOfTheArray = data.slice(-7);
-        console.log(lastGamesOfTheArray);
-        setrecentlyAddedGames(lastGamesOfTheArray);
+        setRecentlyAddedGames(lastGamesOfTheArray);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+    api.get("/games?sort-by=popularity")
+      .then((response) => {
+        const data = response.data;
+        const mostPlayedGames = data.slice(0, 4);
+        setMostPlayedGames(mostPlayedGames);
       })
       .catch((err) => {
         console.log(err);
@@ -65,7 +76,7 @@ const Home: NextPage = () => {
             <div className="md:w-2/3">
               <h3 className='text-[#A1A1AA] gap-1 text-[24px] font-[500] mb-2'>Adicionados recentemente</h3>
               <ul className="flex flex-col">
-                {recentlyAddedGames.map((game: RecentlyAddedGamesTypes) => {
+                {recentlyAddedGames.map((game: GamesTypes) => {
                   return (
                     <li key={game.id}>
                       <GameCardExtended
@@ -82,10 +93,9 @@ const Home: NextPage = () => {
             </div>
             <div>
               <h3 className='text-[#A1A1AA] gap-1 text-[24px] font-[500] mb-2'>Mais jogados</h3>
-              <GameCardImageFull imageURL="https://www.freetogame.com/g/4/thumbnail.jpg"/>
-              <GameCardImageFull imageURL="https://www.freetogame.com/g/4/thumbnail.jpg"/>
-              <GameCardImageFull imageURL="https://www.freetogame.com/g/4/thumbnail.jpg"/>
-              <GameCardImageFull imageURL="https://www.freetogame.com/g/4/thumbnail.jpg"/>
+              {mostPlayedGames.map((game: GamesTypes) => {
+                return <GameCardImageFull key={game.id} imageURL={game.thumbnail} gameURL={game.game_url}/>
+              })}
             </div>
           </div>
         </div>

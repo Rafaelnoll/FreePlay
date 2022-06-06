@@ -4,16 +4,19 @@ import styles from "./styles.module.css";
 
 interface Props {
     imageURL: string;
+    gameURL: string;
 }
 
-const GameCardImageFull = ({ imageURL }: Props) => {
+const GameCardImageFull = ({ imageURL, gameURL }: Props) => {
     return (
-        <div className={styles.gameCardImageFull}>
-            <img
-                src={imageURL}
-            />
-            <span>Free</span>
-        </div>
+        <a href={gameURL} target="_blank">
+            <div className={styles.gameCardImageFull}>
+                <img
+                    src={imageURL}
+                />
+                <span>Free</span>
+            </div>
+        </a>
     );
 }
 
