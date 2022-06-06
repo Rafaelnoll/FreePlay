@@ -1,9 +1,9 @@
 .nav{
-    @apply bg-[#27272A] fixed w-full top-0 block z-[999];
+    @apply bg-[#27272A] fixed w-full top-0 block z-[999] shadow-md;
 }
 
 .navbarContainer {
-    @apply max-w-6xl px-4 m-auto bg-[#27272A] flex justify-between gap-4 items-center py-1 shadow-md; 
+    @apply max-w-6xl px-4 m-auto bg-[#27272A] flex justify-between gap-4 items-center py-1; 
 }
 
 .nav h1 {
