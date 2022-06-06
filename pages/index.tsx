@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import type { NextPage } from 'next'
 import Header from '../src/components/Header'
-import { Robot } from "phosphor-react";
+import { CaretRight, Robot } from "phosphor-react";
 import GameCard from '../src/components/GameCards/GameCard';
 import GameCardExtended from '../src/components/GameCards/GameCardExtended';
 
@@ -41,7 +41,7 @@ const Home: NextPage = () => {
     api.get("/games")
       .then((response) => {
         const data = response.data;
-        const lastGamesOfTheArray = data.slice(-7);
+        const lastGamesOfTheArray = data.slice(-7).reverse();
         setRecentlyAddedGames(lastGamesOfTheArray);
       })
       .catch((err) => {
@@ -90,11 +90,17 @@ const Home: NextPage = () => {
                   )
                 })}
               </ul>
+              <div className="flex justify-end">
+                <button className="flex items-center gap-1 justify-center text-[#7a8288] border px-4 py-2 rounded border-[#7a8288] hover:text-[#FFFFFF] hover:border-[#FFFFFF]">
+                  <a href="/games">Mais jogos</a>
+                  <CaretRight size={15} weight="bold" />
+                </button>
+              </div>
             </div>
             <div>
               <h3 className='text-[#A1A1AA] gap-1 text-[24px] font-[500] mb-2'>Mais jogados</h3>
               {mostPlayedGames.map((game: GamesTypes) => {
-                return <GameCardImageFull key={game.id} imageURL={game.thumbnail} gameURL={game.game_url}/>
+                return <GameCardImageFull key={game.id} imageURL={game.thumbnail} gameURL={game.game_url} />
               })}
             </div>
           </div>

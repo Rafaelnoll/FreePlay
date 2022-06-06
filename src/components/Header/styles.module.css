@@ -28,5 +28,5 @@
 }
 
 .browseGamesButton{
-    @apply text-[#7a8288] border-2 p-3 rounded-md border-[#7a8288] hover:text-[#FFFFFF] hover:border-[#FFFFFF]
+    @apply text-[#7a8288] border-2 p-3 rounded-md border-[#7a8288] hover:text-[#FFFFFF] hover:border-[#FFFFFF];
 }
