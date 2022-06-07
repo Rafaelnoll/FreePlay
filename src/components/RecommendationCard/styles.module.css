@@ -1,0 +1,31 @@
+.recommendationCard{
+    @apply flex items-center flex-col md:flex-row bg-[#1c1e22] md:w-1/2 px-[10px] rounded;
+}
+
+.gameCardContainer{
+    @apply px-[10px] w-full md:max-w-[50%] mt-6; 
+}
+
+.gameDescription{
+    @apply px-[10px] md:max-w-[50%] text-[15px] text-[#A1A1AA];
+}
+
+.gameDescription span{
+    @apply float-left pr-2;
+}
+
+.gameDescription p {
+    @apply line-clamp-[7] mb-2;
+}
+
+.userCommentContainer{
+    @apply flex items-center text-[#7a8288];
+}
+
+.userCommentContainer img {
+    @apply w-[32px];
+}
+
+.userCommentContainer span{
+    @apply pl-2;
+}

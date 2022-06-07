@@ -7,6 +7,7 @@ import GameCardExtended from '../src/components/GameCards/GameCardExtended';
 
 import api from "../src/libs/api";
 import GameCardImageFull from "../src/components/GameCards/GameCardImageFull";
+import RecommendationCard from "../src/components/RecommendationCard";
 
 const recommendedGames = [
   {
@@ -20,6 +21,25 @@ const recommendedGames = [
   {
     name: "Word of Warships",
     cardImageURL: "https://www.freetogame.com/g/9/thumbnail.jpg"
+  }
+];
+
+const communityRecommendations = [
+  {
+    name: "Genshin Impact",
+    gameId: 475,
+    comment: "If you have been looking for a game like Breath of the Wild on pc, look no further. It is clear that they took a lot of inspiration from this game and made a fantastic game on pc. I can reccommend this game for everyone that likes open world exploration games. It's hard to believe that the game is completely free, because of the quality. Graphics are very good and the game is running very stable and has a very smooth framerate. Better than the recently released triple a games.",
+    userName: "Fulano123",
+    imageURL: "https://www.freetogame.com/g/475/thumbnail.jpg",
+    gameURL: "https://www.freetogame.com/open/genshin-impact",
+  },
+  {
+    name: "PUBG: BATTLEGROUNDS",
+    gameId: 516,
+    comment: "Amazing play this game you will have very good dreams play and download!",
+    userName: "Beltrano321",
+    imageURL: "https://www.freetogame.com/g/516/thumbnail.jpg",
+    gameURL: "https://www.freetogame.com/open/pubg",
   }
 ]
 
@@ -63,6 +83,7 @@ const Home: NextPage = () => {
     <>
       <Header />
       <main className="py-12">
+
         <div className="md:max-w-6xl max-w-lg m-auto px-4">
           <h3 className="flex items-center text-[#A1A1AA] gap-1 text-[24px] font-[500] mb-2"><Robot size={32} weight="fill" />Recomendações personalizadas</h3>
           <div className='flex w-full md:gap-4 flex-wrap md:flex-nowrap justify-between items-center'>
@@ -71,8 +92,10 @@ const Home: NextPage = () => {
             })}
           </div>
         </div>
+
         <div>
           <div className='flex flex-col md:flex-row justify-between gap-5 md:max-w-6xl max-w-lg m-auto px-4'>
+
             <div className="md:w-2/3">
               <h3 className='text-[#A1A1AA] gap-1 text-[24px] font-[500] mb-2'>Adicionados recentemente</h3>
               <ul className="flex flex-col">
@@ -97,14 +120,33 @@ const Home: NextPage = () => {
                 </button>
               </div>
             </div>
+
             <div>
               <h3 className='text-[#A1A1AA] gap-1 text-[24px] font-[500] mb-2'>Mais jogados</h3>
               {mostPlayedGames.map((game: GamesTypes) => {
                 return <GameCardImageFull key={game.id} imageURL={game.thumbnail} gameURL={game.game_url} />
               })}
             </div>
+
           </div>
         </div>
+
+        <div className="md:max-w-6xl max-w-lg m-auto px-4">
+          <h3 className='text-[#A1A1AA] text-[24px] font-[500] mb-2'>Recomendações da comunidade</h3>
+          <div className="flex flex-col md:flex-row gap-4">
+            {communityRecommendations.map((game) => {
+              return (<RecommendationCard
+                key={game.gameId}
+                gameName={game.name}
+                imageURL={game.imageURL}
+                comment={game.comment}
+                userName={game.userName}
+                gameURL={game.gameURL}
+              />)
+            })}
+          </div>
+        </div>
+
       </main>
     </>
   )
