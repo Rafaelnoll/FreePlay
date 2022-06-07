@@ -12,15 +12,18 @@ import RecommendationCard from "../src/components/RecommendationCard";
 const recommendedGames = [
   {
     name: "CRSED: F.O.A.D",
-    cardImageURL: "https://www.freetogame.com/g/4/thumbnail.jpg"
+    cardImageURL: "https://www.freetogame.com/g/4/thumbnail.jpg",
+    gameURL: "https://www.freetogame.com/open/crsed"
   },
   {
     name: "Neverwinter",
-    cardImageURL: "https://www.freetogame.com/g/11/thumbnail.jpg"
+    cardImageURL: "https://www.freetogame.com/g/11/thumbnail.jpg",
+    gameURL: "https://www.freetogame.com/open/neverwinter"
   },
   {
     name: "Word of Warships",
-    cardImageURL: "https://www.freetogame.com/g/9/thumbnail.jpg"
+    cardImageURL: "https://www.freetogame.com/g/9/thumbnail.jpg",
+    gameURL: "https://www.freetogame.com/open/world-of-warships"
   }
 ];
 
@@ -88,7 +91,7 @@ const Home: NextPage = () => {
           <h3 className="flex items-center text-[#A1A1AA] gap-1 text-[24px] font-[500] mb-2"><Robot size={32} weight="fill" />Recomendações personalizadas</h3>
           <div className='flex w-full md:gap-4 flex-wrap md:flex-nowrap justify-between items-center'>
             {recommendedGames.map((game) => {
-              return <GameCard key={game.name} name={game.name} imageURL={game.cardImageURL} />
+              return <GameCard key={game.name} name={game.name} imageURL={game.cardImageURL} gameURL={game.gameURL} />
             })}
           </div>
         </div>
