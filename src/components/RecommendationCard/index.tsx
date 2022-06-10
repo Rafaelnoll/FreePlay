@@ -17,7 +17,7 @@ const RecommendationCard = ({ gameName, imageURL, comment, userName, gameURL }: 
     return (
         <div className={styles.recommendationCard}>
             <div className={styles.gameCardContainer}>
-                <GameCard name={gameName} imageURL={imageURL} gameURL={gameURL} />
+                <GameCard name={gameName} imageURL={imageURL} />
             </div>
             <div className={styles.gameDescription}>
                 <p>
