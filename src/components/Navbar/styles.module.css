@@ -3,7 +3,11 @@
 }
 
 .navbarContainer {
-    @apply max-w-6xl px-4 m-auto bg-[#27272A] flex justify-between gap-4 items-center py-1; 
+    @apply max-w-6xl px-4 m-auto bg-[#27272A] flex justify-between items-center gap-4 py-1; 
+}
+
+.logoContainer{
+    @apply max-w-[168px] flex items-center justify-center;
 }
 
 .nav h1 {

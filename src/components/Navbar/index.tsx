@@ -1,7 +1,10 @@
 import React from "react";
 import { NextPage } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { MagnifyingGlass } from "phosphor-react";
+
+import LogoWithName from "../../../styles/imgs/logo-with-name.png";
 
 import styles from "./styles.module.css";
 
@@ -9,9 +12,11 @@ const Navbar: NextPage = () => {
     return (
         <nav className={styles.nav}>
             <div className={styles.navbarContainer}>
-                <Link href="/">
-                    <a><h1>PlayFree</h1></a>
-                </Link>
+                <div className={styles.logoContainer}>
+                    <Link href="/">
+                        <Image src={LogoWithName} />
+                    </Link>
+                </div>
                 <div className={styles.navbarContent}>
                     <ul>
                         <li>
