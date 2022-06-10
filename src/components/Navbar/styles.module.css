@@ -7,7 +7,11 @@
 }
 
 .logoContainer{
-    @apply max-w-[168px] flex items-center justify-center;
+    @apply max-w-[168px];
+}
+
+.logoContainer a {
+    @apply flex items-center justify-center;
 }
 
 .nav h1 {
