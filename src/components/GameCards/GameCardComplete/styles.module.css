@@ -1,0 +1,36 @@
+.gameCardComplete{
+    @apply max-w-[33%] bg-[#32383e] rounded cursor-pointer;
+    @apply drop-shadow-md transition-all hover:scale-[1.02] hover:drop-shadow-xl;
+}
+
+.gameCardComplete img {
+    @apply rounded-t;
+}
+
+.gameCardCompleteBody{
+    @apply p-5;
+}
+
+.gameCardCompleteBody p {
+    @apply text-[15px] text-[#7a8288] mb-2 whitespace-nowrap overflow-hidden text-ellipsis;
+}
+
+.gameCardCompleteHeader{
+    @apply flex justify-between items-center mb-3;
+}
+
+.gameCardCompleteHeader h3 {
+    @apply text-[#A1A1AA] text-[19px] font-[700] mb-1 shadow-sm overflow-hidden text-ellipsis whitespace-nowrap;
+}
+
+.gameCardCompleteHeader span{
+    @apply bg-[#4799eb] text-[#fff] text-[11px] font-[700] p-1 rounded uppercase;
+}
+
+.gameCardCompleteFooter{
+    @apply flex justify-end;
+}
+
+.gameCardCompleteFooter span{
+    @apply bg-[#7a8288] rounded text-[11px] font-bold mr-2 px-[4.5px] py-[2.8px];
+}

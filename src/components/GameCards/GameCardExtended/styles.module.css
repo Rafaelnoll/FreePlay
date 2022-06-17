@@ -28,7 +28,7 @@
 }
 
 .gameCardDescription {
-    @apply text-[15px] text-[#7a8288] mb-1 whitespace-nowrap overflow-hidden text-ellipsis
+    @apply text-[15px] text-[#7a8288] mb-1 whitespace-nowrap overflow-hidden text-ellipsis;
 }
 
 .gameCardPlataformType{
