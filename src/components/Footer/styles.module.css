@@ -1,0 +1,47 @@
+.footer{
+    @apply bg-[#1c1e22] py-4 w-full;
+}
+
+.footerContainer{
+    @apply max-w-5xl m-auto px-[15px];
+}
+
+.footerContainer hr {
+    @apply my-4 border-t border-[rgba(94,84,84,0.1)]
+}
+
+.footerLists{
+    @apply flex flex-col md:flex-row md:items-stretch justify-center;
+}
+
+.footerLists hr{
+    @apply my-4 border-t md:border-t-0 border-[rgba(94,84,84,0.1)];
+}
+
+.footerContainer ul{
+    @apply px-[10px] mx-[20px] mt-4 basis-1/5 flex flex-col;
+}
+
+.footerContainer li{
+    @apply mb-4 text-center;
+}
+
+.footerContainer a{
+    @apply cursor-pointer text-[#fff] hover:text-[#A1A1AA] font-[400];
+}
+
+.footerLogoContainer{
+    @apply max-w-[135px] px-[10px] m-auto md:mx-[20px];
+}
+
+.footerBottom{
+    @apply flex flex-col md:flex-row justify-between items-center;
+}
+
+.footerBottom p {
+    @apply text-[#A1A1AA] text-[12px] mb-4 md:m-0
+}
+
+.footerBottom div{
+    @apply flex md:justify-between gap-6
+}

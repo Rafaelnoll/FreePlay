@@ -8,6 +8,7 @@ import GameCardExtended from '../src/components/GameCards/GameCardExtended';
 import api from "../src/libs/api";
 import GameCardImageFull from "../src/components/GameCards/GameCardImageFull";
 import RecommendationCard from "../src/components/RecommendationCard";
+import Footer from "../src/components/Footer";
 
 const recommendedGames = [
   {
@@ -148,6 +149,7 @@ const Home: NextPage = () => {
         </div>
 
       </main>
+      <Footer />
     </>
   )
 }
