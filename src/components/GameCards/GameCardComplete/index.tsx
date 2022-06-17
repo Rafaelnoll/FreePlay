@@ -13,8 +13,8 @@ interface Props {
 
 const GameCardComplete = ({ name, imageURL, descrition, genre, gameURL }: Props) => {
     return (
-        <a href={gameURL} target="_blank">
-            <div className={styles.gameCardComplete}>
+        <div className={styles.gameCardComplete}>
+            <a href={gameURL} target="_blank">
                 <img src={imageURL} />
                 <div className={styles.gameCardCompleteBody}>
                     <div className={styles.gameCardCompleteHeader}>
@@ -27,8 +27,8 @@ const GameCardComplete = ({ name, imageURL, descrition, genre, gameURL }: Props)
                         <WindowsLogo size={25} weight="fill" color="#7a8288" />
                     </div>
                 </div>
-            </div>
-        </a>
+            </a>
+        </div>
     );
 }
 
