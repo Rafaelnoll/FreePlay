@@ -11,17 +11,20 @@ const recommendedGames = [
     {
         name: "CRSED: F.O.A.D",
         cardImageURL: "https://www.freetogame.com/g/4/thumbnail.jpg",
-        gameURL: "https://www.freetogame.com/open/crsed"
+        gameURL: "https://www.freetogame.com/open/crsed",
+        id: 1
     },
     {
         name: "Neverwinter",
         cardImageURL: "https://www.freetogame.com/g/11/thumbnail.jpg",
-        gameURL: "https://www.freetogame.com/open/neverwinter"
+        gameURL: "https://www.freetogame.com/open/neverwinter",
+        id: 2
     },
     {
         name: "Word of Warships",
         cardImageURL: "https://www.freetogame.com/g/9/thumbnail.jpg",
-        gameURL: "https://www.freetogame.com/open/world-of-warships"
+        gameURL: "https://www.freetogame.com/open/world-of-warships",
+        id: 3
     }
 ];
 
@@ -44,7 +47,6 @@ const Games: NextPage = () => {
                 const allGames = response.data;
                 setTotalNumberOfGames(allGames.length);
                 const newArrayOfGames = allGames.splice(0, 30);
-                console.log(newArrayOfGames)
                 setGames(newArrayOfGames);
             })
             .catch((err) => {
@@ -55,7 +57,7 @@ const Games: NextPage = () => {
     return (
         <>
             <Navbar />
-            <main className="py-6 px-[15px] max-w-6xl m-auto min-h-screen">
+            <main className="py-6 px-[15px] max-w-xl md:max-w-6xl m-auto min-h-screen">
 
                 <div className="md:max-w-6xl max-w-full m-auto md:px-2">
                     <h1 className="flex items-center text-[#A1A1AA] gap-1 text-[32px] font-[500] mb-2">
@@ -64,7 +66,7 @@ const Games: NextPage = () => {
                     <p className="text-[15px] text-[#7a8288] mb-1">{`${totalNumberOfGames} jogos grátis achados na nossa lista`}</p>
                     <div className='flex w-full md:gap-4 flex-wrap md:flex-nowrap justify-between items-center mt-6 mb-2'>
                         {recommendedGames.map((game) => {
-                            return <GameCardImageFull imageURL={game.cardImageURL} gameURL={game.gameURL} />
+                            return <GameCardImageFull key={game.id} imageURL={game.cardImageURL} gameURL={game.gameURL} />
                         })}
                     </div>
                 </div>
