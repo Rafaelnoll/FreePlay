@@ -13,17 +13,21 @@ import Footer from "../src/components/Footer";
 const recommendedGames = [
   {
     name: "CRSED: F.O.A.D",
-    cardImageURL: "https://www.freetogame.com/g/4/thumbnail.jpg"
+    cardImageURL: "https://www.freetogame.com/g/4/thumbnail.jpg",
+    gameURL: "https://www.freetogame.com/open/crsed"
   },
   {
     name: "Neverwinter",
-    cardImageURL: "https://www.freetogame.com/g/11/thumbnail.jpg"
+    cardImageURL: "https://www.freetogame.com/g/11/thumbnail.jpg",
+    gameURL: "https://www.freetogame.com/open/neverwinter"
   },
   {
     name: "Word of Warships",
-    cardImageURL: "https://www.freetogame.com/g/9/thumbnail.jpg"
+    cardImageURL: "https://www.freetogame.com/g/9/thumbnail.jpg",
+    gameURL: "https://www.freetogame.com/open/world-of-warships"
   }
 ];
+
 
 const communityRecommendations = [
   {
@@ -83,7 +87,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Header />
-      <main className="py-12">
+      <main className="py-12 min-h-screen">
 
         <div className="md:max-w-6xl max-w-lg m-auto px-4">
           <h3 className="flex items-center text-[#A1A1AA] gap-1 text-[24px] font-[500] mb-2"><Robot size={32} weight="fill" />Recomendações personalizadas</h3>

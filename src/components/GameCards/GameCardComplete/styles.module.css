@@ -1,5 +1,5 @@
 .gameCardComplete{
-    @apply max-w-[23%] bg-[#32383e] rounded cursor-pointer mb-6 mx-[1%] box-border;
+    @apply w-full sm:max-w-[31.3%] md:max-w-[23%] bg-[#32383e] rounded cursor-pointer mb-6 sm:mx-[1%] box-border;
     @apply drop-shadow-md transition-all hover:scale-[1.02] hover:drop-shadow-xl;
 }
 

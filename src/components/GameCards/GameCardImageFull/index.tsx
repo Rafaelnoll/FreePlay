@@ -9,7 +9,7 @@ interface Props {
 
 const GameCardImageFull = ({ imageURL, gameURL }: Props) => {
     return (
-        <a href={gameURL} target="_blank">
+        <a href={gameURL} target="_blank" className="w-full">
             <div className={styles.gameCardImageFull}>
                 <img
                     src={imageURL}
