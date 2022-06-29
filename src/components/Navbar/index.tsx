@@ -9,27 +9,27 @@ import LogoWithName from "../../../styles/imgs/logo-with-name.png";
 
 import styles from "./styles.module.css";
 
+const navbarLinks = [
+    {
+        text: "Games List",
+        href: "/games"
+    },
+    {
+        text: "Special Offers",
+        href: "/games"
+    },
+    {
+        text: "Top 2022",
+        href: "/games"
+    },
+]
+
 const Navbar: NextPage = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
-    const [screenWidth, setScreenWidth] = useState(0);
 
     function toggleLinksOfMenu() {
         setToggleMenu(!toggleMenu);
     }
-
-    useEffect(() => {
-
-        const changeScreenWidth = () => {
-            setScreenWidth(window.innerWidth);
-        }
-
-        window.addEventListener("resize", changeScreenWidth);
-
-        return () => {
-            window.removeEventListener("resize", changeScreenWidth);
-        }
-
-    }, [])
 
     return (
         <nav className={styles.nav}>
@@ -49,17 +49,9 @@ const Navbar: NextPage = () => {
 
                 <div className={styles.navbarContent}>
                     <div className={styles.navbarLinksList}>
-                        <Link href="/games">
-                            <a>Games List</a>
-                        </Link>
-
-                        <Link href="/games">
-                            <a>Special Offers</a>
-                        </Link>
-
-                        <Link href="/games">
-                            <a>Top 2022</a>
-                        </Link>
+                        {navbarLinks.map(link => {
+                            return <Link key={link.text} href={link.href}><a>{link.text}</a></Link>
+                        })}
                     </div>
                     <div className={styles.buttonsContent}>
                         <Link href="/search">
@@ -77,17 +69,9 @@ const Navbar: NextPage = () => {
                 {(toggleMenu) && (
                     <div className={styles.responsiveNavbarContent}>
                         <div className={styles.navbarLinksList}>
-                            <Link href="/games">
-                                <a>Games List</a>
-                            </Link>
-
-                            <Link href="/games">
-                                <a>Special Offers</a>
-                            </Link>
-
-                            <Link href="/games">
-                                <a>Top 2022</a>
-                            </Link>
+                            {navbarLinks.map(link => {
+                                return <Link key={link.text} href={link.href}><a>{link.text}</a></Link>
+                            })}
                         </div>
                         <div className={styles.buttonsContent}>
                             <Link href="/search">
