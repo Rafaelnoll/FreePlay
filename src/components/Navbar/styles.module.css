@@ -35,19 +35,19 @@
 }
 
 .buttonsContent a {
-    @apply w-full md:w-auto px-2 py-4;
+    @apply w-full md:w-auto;
 }
 
 .registerButton {
-    @apply text-center text-[#4799eb] border-2 p-3 mb-4 md:ml-4 md:mb-0 rounded-md border-[#4799eb] hover:text-[#FFFFFF] hover:border-[#FFFFFF];
+    @apply text-center text-[#4799eb] border-2 py-3 px-4 mb-4 md:ml-4 md:mb-0 rounded-md border-[#4799eb] hover:text-[#FFFFFF] hover:border-[#FFFFFF];
 }
 
 .loginButton {
-    @apply text-[#A1A1AA] hover:text-[#F4F4F5];
+    @apply text-[#A1A1AA] hover:text-[#F4F4F5] px-2 py-4;
 }
 
 .searchButton {
-    @apply text-[#A1A1AA] hover:text-[#F4F4F5] flex items-center;
+    @apply text-[#A1A1AA] hover:text-[#F4F4F5] flex items-center px-2 py-4;
 }
 
 .searchButton span{

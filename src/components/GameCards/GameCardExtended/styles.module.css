@@ -24,7 +24,7 @@
 }
 
 .gameCardExtendedInfos li {
-    @apply bg-[#7a8288] rounded text-[11px] font-bold mr-2 px-[4.5px] py-[2.8px]
+    @apply bg-[#7a8288] rounded text-[11px] font-bold mr-2 px-[4.5px] py-[2.8px];
 }
 
 .gameCardDescription {
@@ -32,12 +32,11 @@
 }
 
 .gameCardPlataformType{
-    display: none;
-    @apply lg:block
+    @apply lg:block hidden text-[#7a8288];
 }
 
 .gameCardPrice{
-    @apply sm:px-[10px]
+    @apply sm:px-[10px];
 }
 
 .gameCardPrice span{

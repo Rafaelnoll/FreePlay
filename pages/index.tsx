@@ -55,6 +55,7 @@ interface GamesTypes {
   thumbnail: string;
   title: string;
   genre: string;
+  platform: string;
 }
 
 const Home: NextPage = () => {
@@ -113,6 +114,7 @@ const Home: NextPage = () => {
                         descrition={game.short_description}
                         genre={game.genre}
                         gameURL={game.game_url}
+                        platform={game.platform}
                       />
                     </li>
                   )
