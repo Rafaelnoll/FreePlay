@@ -1,17 +1,17 @@
-.nav{
+.nav {
     @apply bg-[#27272A] fixed w-full top-0 block z-[999] shadow-md;
 }
 
 .navbarContainer {
-    @apply max-w-xl md:max-w-6xl px-4 m-auto bg-[#27272A] flex justify-between items-center gap-4 py-1; 
+    @apply flex flex-wrap md:flex-nowrap max-w-xl md:max-w-6xl px-4 m-auto bg-[#27272A] justify-between items-center gap-4 py-1;
 }
 
-.logoContainer{
+.logoContainer {
     @apply max-w-[168px];
 }
 
 .logoContainer a {
-    @apply flex items-center justify-center;
+    @apply flex items-center justify-center min-h-[45px];
 }
 
 .nav h1 {
@@ -19,25 +19,45 @@
 }
 
 .navbarContent {
-    @apply flex justify-between w-full items-center;
+    @apply md:flex hidden justify-between w-full items-center;
 }
 
-.navbarContent li a{
-    @apply text-[#A1A1AA] hover:text-[#F4F4F5] text-[15px];
+.navbarLinksList{
+    @apply flex flex-col md:flex-row
+}
+
+.navbarLinksList a {
+    @apply text-[#A1A1AA] hover:text-[#F4F4F5] text-[15px] px-2 py-4 w-full whitespace-nowrap;
 }
 
 .buttonsContent {
-    @apply flex items-center gap-4;
+    @apply flex flex-col md:flex-row md:items-center;
+}
+
+.buttonsContent a {
+    @apply w-full md:w-auto px-2 py-4;
 }
 
 .registerButton {
-    @apply text-[#4799eb] border-2 p-3 rounded-md border-[#4799eb] hover:text-[#FFFFFF] hover:border-[#FFFFFF]
+    @apply text-center text-[#4799eb] border-2 p-3 mb-4 md:ml-4 md:mb-0 rounded-md border-[#4799eb] hover:text-[#FFFFFF] hover:border-[#FFFFFF];
 }
 
 .loginButton {
-    @apply text-[#A1A1AA] hover:text-[#F4F4F5]
+    @apply text-[#A1A1AA] hover:text-[#F4F4F5];
 }
 
 .searchButton {
-    @apply text-[#A1A1AA] hover:text-[#F4F4F5]
+    @apply text-[#A1A1AA] hover:text-[#F4F4F5] flex items-center;
+}
+
+.searchButton span{
+    @apply ml-1 md:hidden
+}
+
+.responsiveMenuButton button {
+    @apply block md:hidden cursor-pointer;
+}
+
+.responsiveNavbarContent{
+    @apply md:hidden justify-between w-full items-center;
 }
