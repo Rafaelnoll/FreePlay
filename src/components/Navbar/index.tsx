@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { NextPage } from "next";
 
 import Image from "next/image";
@@ -12,14 +12,6 @@ import styles from "./styles.module.css";
 const navbarLinks = [
     {
         text: "Games List",
-        href: "/games"
-    },
-    {
-        text: "Special Offers",
-        href: "/games"
-    },
-    {
-        text: "Top 2022",
         href: "/games"
     },
 ]
