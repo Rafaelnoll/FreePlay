@@ -16,18 +16,18 @@ const Login: NextPage = () => {
         <>
             <Navbar />
             <main className="h-[100vh] py-6">
-                <div className="max-w-6xl m-auto p-12">
+                <div className="max-w-6xl m-auto md:p-12 p-6">
                     <div className="flex bg-[#32383e] shadow-2xl rounded-[5px]">
                         <div className="hidden lg:flex basis-1/2 items-center justify-center bg-[#1c1e22]">
                             <div className="max-w-[50%]">
                                 <Image src={Logo} />
                             </div>
                         </div>
-                        <div className="flex flex-col justify-center items-center lg:basis-1/2 p-12 w-full">
+                        <div className="flex flex-col justify-center items-center lg:basis-1/2 md:p-12 p-6 w-full">
                             <div className="w-[80px]">
                                 <Image src={LogoGrey} />
                             </div>
-                            <h3 className="text-[#A1A1AA] font-bold text-[19px] mb-6">Log in to FreePlay!</h3>
+                            <h3 className="text-[#A1A1AA] font-bold text-[19px] mb-6 text-center">Log in to FreePlay!</h3>
                             <form className="w-full p-5 lg:w-auto lg:p-0">
                                 <input placeholder="Email Address" className="w-full py-3 px-4 bg-[#1c1e22] text-[#7a8288] outline-none mb-4 rounded-[5px]" />
                                 <input placeholder="Password" className="py-3 px-4 bg-[#1c1e22] text-[#7a8288] outline-none w-full mb-4 rounded-[5px]" />
@@ -38,7 +38,7 @@ const Login: NextPage = () => {
                                     Login
                                 </button>
                                 <hr className="border-t border-[rgba(170,170,170,0.1)] w-full my-4" />
-                                <div className="text-[#aaaaaa] text-[12px] flex justify-center">
+                                <div className="text-[#aaaaaa] text-[12px] flex justify-center flex-wrap">
                                     <span>Not a member yet?</span>
                                     <Link href="/register">
                                         <a className="flex items-center ml-1 text-[#4799eb] hover:text-[#fff]">Create Account <CaretRight size={10} weight="bold" /></a>

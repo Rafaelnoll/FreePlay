@@ -46,7 +46,7 @@ const Navbar: NextPage = () => {
                         })}
                     </div>
                     <div className={styles.buttonsContent}>
-                        <Link href="/search">
+                        <Link href="#">
                             <a className={styles.searchButton}><MagnifyingGlass weight="bold" size={18} /><span>Search</span></a>
                         </Link>
                         <Link href="/login">

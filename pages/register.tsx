@@ -14,15 +14,15 @@ const Register: NextPage = () => {
         <>
             <Navbar />
             <main className="h-[100vh] py-6">
-                <div className="max-w-6xl m-auto p-12">
+                <div className="max-w-6xl m-auto md:p-12 p-6">
                     <div className="flex bg-[#32383e] shadow-2xl rounded-[5px]">
                         <div className="hidden lg:flex basis-2/5 items-center justify-center bg-[#1c1e22]">
                             <div className="max-w-[50%]">
                                 <Image src={Logo} />
                             </div>
                         </div>
-                        <div className="flex flex-col justify-center items-center lg:basis-3/5 p-5 w-full">
-                            <h3 className="text-[#A1A1AA] font-bold text-[19px] mb-6">Create My Account!</h3>
+                        <div className="flex flex-col justify-center items-center lg:basis-3/5 md:p-12 p-6 w-full">
+                            <h3 className="text-[#A1A1AA] font-bold text-[19px] mb-6 text-center">Create My Account!</h3>
                             <form className="w-full p-5 lg:w-auto lg:p-0">
                                 <input placeholder="Username" className="w-full py-3 px-4 bg-[#1c1e22] text-[#7a8288] outline-none mb-4 rounded-[5px]" />
                                 <input placeholder="Email Address" className="w-full py-3 px-4 bg-[#1c1e22] text-[#7a8288] outline-none mb-4 rounded-[5px]" />
