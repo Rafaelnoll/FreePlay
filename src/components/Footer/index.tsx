@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import LogoFooter from "../../../styles/imgs/logo-footer.png";
+import LogoFooter from "../../../styles/imgs/logo-grey.png";
 
 import styles from "./styles.module.css";
 import { GithubLogo, LinkedinLogo } from "phosphor-react";
