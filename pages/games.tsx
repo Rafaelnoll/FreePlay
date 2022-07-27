@@ -46,8 +46,9 @@ const Games: NextPage = () => {
             .then((response) => {
                 const allGames = response.data;
                 setTotalNumberOfGames(allGames.length);
-                const newArrayOfGames = allGames.splice(0, 30);
-                setGames(newArrayOfGames);
+                //const newArrayOfGames = allGames.splice(0, 30); // Get only the 30 first games
+                //setGames(newArrayOfGames); 
+                setGames(allGames);
             })
             .catch((err) => {
                 console.log(err);
