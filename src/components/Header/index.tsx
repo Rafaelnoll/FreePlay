@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import Link from "next/link";
 import Navbar from "../Navbar";
 
@@ -9,17 +9,17 @@ const Header = () => {
         <header className={styles.header}>
             <Navbar />
             <div className={styles.headerContent}>
-                <h1>Encontre e acompanhe os melhores <span>jogos grátis</span> para jogar!</h1>
-                <h2>Acompanhe o que você jogou e procure o que jogar em seguida!</h2>
+                <h1>Find & track the best <span>free-to-play</span> games!</h1>
+                <h2>Track what you've played and search for what to play next!</h2>
                 <div className={styles.headerButtonsContainer}>
                     <button className={styles.beginButton}>
                         <Link href="/register">
-                            <a>Começar já</a>
+                            <a>Get started<span>It's free</span></a>
                         </Link>
                     </button>
                     <button className={styles.browseGamesButton}>
                         <Link href="/games">
-                            <a>Buscar Jogos</a>
+                            <a>Browse Games</a>
                         </Link>
                     </button>
                 </div>

@@ -7,7 +7,7 @@
 }
 
 .headerContent h1{
-    @apply text-3xl text-[#A1A1AA] mb-2;
+    @apply text-3xl text-[#A1A1AA] mb-2 font-medium;
 }
 
 .headerContent h2{
@@ -25,6 +25,14 @@
 .beginButton{
     @apply text-[#FFFFFF] text-[15px] font-bold bg-[#4799eb] py-3 px-4 my-2 mr-2;
     @apply border-2 border-[#4799eb] rounded-md hover:bg-[#3776b4] hover:border-[#3776b4];
+}
+
+.beginButton a{
+    @apply uppercase;
+}
+
+.beginButton span{
+    @apply text-[12px] normal-case text-[#FFFFFF] ml-1;
 }
 
 .browseGamesButton{

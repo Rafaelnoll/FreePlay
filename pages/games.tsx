@@ -61,9 +61,9 @@ const Games: NextPage = () => {
 
                 <div className="md:max-w-6xl max-w-full m-auto md:px-2">
                     <h1 className="flex items-center text-[#A1A1AA] gap-1 text-[32px] font-[500] mb-2">
-                        Melhores jogos grátis para PC e Navegador em 2022
+                        Best Free Games for PC and Browser In 2022!
                     </h1>
-                    <p className="text-[15px] text-[#7a8288] mb-1">{`${totalNumberOfGames} jogos grátis achados na nossa lista`}</p>
+                    <p className="text-[15px] text-[#7a8288] mb-1">{`${totalNumberOfGames} free-to-play games found in our games list!`}</p>
                     <div className='flex w-full md:gap-4 flex-wrap md:flex-nowrap justify-between items-center mt-6 mb-2'>
                         {recommendedGames.map((game) => {
                             return <GameCardImageFull key={game.id} imageURL={game.cardImageURL} gameURL={game.gameURL} />

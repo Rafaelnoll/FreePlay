@@ -91,7 +91,7 @@ const Home: NextPage = () => {
       <main className="py-12 min-h-screen">
 
         <div className="md:max-w-6xl max-w-lg m-auto px-4">
-          <h3 className="flex items-center text-[#A1A1AA] gap-1 text-[24px] font-[500] mb-2"><Robot size={32} weight="fill" />Recomendações personalizadas</h3>
+          <h3 className="flex items-center text-[#A1A1AA] gap-1 text-[24px] font-[500] mb-2"><Robot size={32} weight="fill" />Personalized Recommendations</h3>
           <div className='flex w-full md:gap-4 flex-wrap md:flex-nowrap justify-between items-center'>
             {recommendedGames.map((game) => {
               return <GameCard key={game.name} name={game.name} imageURL={game.cardImageURL} />
@@ -103,7 +103,7 @@ const Home: NextPage = () => {
           <div className='flex flex-col md:flex-row justify-between gap-5 md:max-w-6xl max-w-lg m-auto px-4'>
 
             <div className="md:w-2/3">
-              <h3 className='text-[#A1A1AA] gap-1 text-[24px] font-[500] mb-2'>Adicionados recentemente</h3>
+              <h3 className='text-[#A1A1AA] gap-1 text-[24px] font-[500] mb-2'>Recently Added</h3>
               <ul className="flex flex-col">
                 {recentlyAddedGames.map((game: GamesTypes) => {
                   return (
@@ -122,14 +122,14 @@ const Home: NextPage = () => {
               </ul>
               <div className="flex justify-end">
                 <button className="flex items-center gap-1 justify-center text-[#7a8288] border px-4 py-2 rounded border-[#7a8288] hover:text-[#FFFFFF] hover:border-[#FFFFFF]">
-                  <a href="/games">Mais jogos</a>
+                  <a href="/games">More Games</a>
                   <CaretRight size={15} weight="bold" />
                 </button>
               </div>
             </div>
 
             <div>
-              <h3 className='text-[#A1A1AA] gap-1 text-[24px] font-[500] mb-2'>Mais jogados</h3>
+              <h3 className='text-[#A1A1AA] gap-1 text-[24px] font-[500] mb-2'>Most Played</h3>
               {mostPlayedGames.map((game: GamesTypes) => {
                 return <GameCardImageFull key={game.id} imageURL={game.thumbnail} gameURL={game.game_url} />
               })}
@@ -139,7 +139,7 @@ const Home: NextPage = () => {
         </div>
 
         <div className="md:max-w-6xl max-w-lg m-auto px-4">
-          <h3 className='text-[#A1A1AA] text-[24px] font-[500] mb-2'>Recomendações da comunidade</h3>
+          <h3 className='text-[#A1A1AA] text-[24px] font-[500] mb-2'>Community Recommendations</h3>
           <div className="flex flex-col md:flex-row gap-4">
             {communityRecommendations.map((game) => {
               return (<RecommendationCard
