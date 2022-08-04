@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import LogoFooter from "../../../styles/imgs/logo-grey.png";
 
 import styles from "./styles.module.css";
@@ -11,21 +12,21 @@ const Footer = () => {
             <div className={styles.footerContainer}>
                 <div className={styles.footerLists}>
                     <ul>
-                        <li><a href="/">About Us</a></li>
-                        <li><a href="/">API</a></li>
-                        <li><a href="/">Contact Us</a></li>
+                        <li><Link href="#"><a>About Us</a></Link></li>
+                        <li><Link href="#"><a>API</a></Link></li>
+                        <li><Link href="#"><a>Contact Us</a></Link></li>
                     </ul>
                     <hr />
                     <ul>
-                        <li><a href="/">Help/FAQ</a></li>
-                        <li><a href="/">Support & Bugs</a></li>
-                        <li><a href="/">Feature Request</a></li>
+                        <li><Link href="#"><a>Help/FAQ</a></Link></li>
+                        <li><Link href="#"><a>Suport & Bugs</a></Link></li>
+                        <li><Link href="#"><a>Feature Request</a></Link></li>
                     </ul>
                     <hr />
                     <ul>
-                        <li><a href="/">Privacy Policy</a></li>
-                        <li><a href="/">Cookies Policy</a></li>
-                        <li><a href="/">Terms of Use</a></li>
+                        <li><Link href="#"><a>Privacy Policy</a></Link></li>
+                        <li><Link href="#"><a>Cookies Policy</a></Link></li>
+                        <li><Link href="#"><a>Terms of use</a></Link></li>
                     </ul>
                     <div className={styles.footerLogoContainer}>
                         <Image src={LogoFooter} />
@@ -33,10 +34,10 @@ const Footer = () => {
                 </div>
                 <hr />
                 <div className={styles.footerBottom}>
-                    <p>Made by <a href="https://github.com/Rafaelnoll">Rafaelnoll</a>, inspired by <a href="https://www.freetogame.com/">freetogames</a>.</p>
+                    <p>Made by <Link href="https://github.com/Rafaelnoll"><a>RafaelNoll</a></Link>, inspired by <Link href="https://www.freetogame.com/"><a>freetogames</a></Link>.</p>
                     <div>
-                        <a href="https://github.com/Rafaelnoll"><GithubLogo size={22} weight="fill" /></a>
-                        <a href="https://www.linkedin.com/in/rafael-noll-ds/"><LinkedinLogo size={22} weight="fill" /></a>
+                        <Link href="https://github.com/Rafaelnoll"><a><GithubLogo size={22} weight="fill" /></a></Link>
+                        <Link href="https://www.linkedin.com/in/rafael-noll-ds/"><a><LinkedinLogo size={22} weight="fill" /></a></Link>
                     </div>
                 </div>
             </div>
