@@ -1,4 +1,4 @@
-<h1>PlayFree</h1> 
+<h1>FreePlay</h1> 
 
 <p text-align="center">
   <img src="http://img.shields.io/static/v1?label=License&message=MIT&color=blueviolet&style=for-the-badge"/>
@@ -22,3 +22,5 @@
 - Axios
 - Phosphor-react
 - Typescript
+
+## Link do site - <a href="https://play-free-jet.vercel.app/">FreePlay</a>
