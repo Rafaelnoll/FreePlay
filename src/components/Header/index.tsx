@@ -14,7 +14,7 @@ const Header = () => {
                 <div className={styles.headerButtonsContainer}>
                     <button className={styles.beginButton}>
                         <Link href="/register">
-                            <a>Get started<span>It's free</span></a>
+                            <a>Get started<span>It&aposs free</span></a>
                         </Link>
                     </button>
                     <button className={styles.browseGamesButton}>
