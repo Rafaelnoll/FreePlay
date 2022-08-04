@@ -14,7 +14,7 @@ interface Props {
 
 const GameCardExtended = ({ name, imageURL, descrition, genre, gameURL, platform }: Props) => {
     return (
-        <a href={gameURL} target="_blank">
+        <a href={gameURL} target="_blank" rel="noreferrer">
             <div className={styles.gameCardExtended}>
                 <div className={styles.gameCardExtendeBody}>
                     <div>

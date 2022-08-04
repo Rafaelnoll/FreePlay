@@ -14,7 +14,7 @@ interface Props {
 const GameCardComplete = ({ name, imageURL, descrition, genre, gameURL }: Props) => {
     return (
         <div className={styles.gameCardComplete}>
-            <a href={gameURL} target="_blank">
+            <a href={gameURL} target="_blank" rel="noreferrer">
                 <img src={imageURL} />
                 <div className={styles.gameCardCompleteBody}>
                     <div className={styles.gameCardCompleteHeader}>
