@@ -10,11 +10,11 @@ const Header = () => {
             <Navbar />
             <div className={styles.headerContent}>
                 <h1>Find & track the best <span>free-to-play</span> games!</h1>
-                <h2>Track what you've played and search for what to play next!</h2>
+                <h2>Track what you&lsquo;ve played and search for what to play next!</h2>
                 <div className={styles.headerButtonsContainer}>
                     <button className={styles.beginButton}>
                         <Link href="/register">
-                            <a>Get started<span>It&aposs free</span></a>
+                            <a>Get started<span>It&lsquo;s free</span></a>
                         </Link>
                     </button>
                     <button className={styles.browseGamesButton}>
