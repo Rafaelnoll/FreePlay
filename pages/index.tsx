@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import type { NextPage } from 'next'
+import Link from "next/link";
 import Header from '../src/components/Header'
 import { CaretRight, Robot } from "phosphor-react";
 import GameCard from '../src/components/GameCards/GameCard';
@@ -122,7 +123,9 @@ const Home: NextPage = () => {
               </ul>
               <div className="flex justify-end">
                 <button className="flex items-center gap-1 justify-center text-[#7a8288] border px-4 py-2 rounded border-[#7a8288] hover:text-[#FFFFFF] hover:border-[#FFFFFF]">
-                  <a href="/games">More Games</a>
+                  <Link href="/games">
+                    <a>More Games</a>
+                  </Link>
                   <CaretRight size={15} weight="bold" />
                 </button>
               </div>
