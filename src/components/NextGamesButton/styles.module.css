@@ -1,0 +1,8 @@
+.button {
+    @apply w-full m-auto flex justify-center gap-5 bg-[#4799eb] hover:bg-[#3776b4] hover:border-[#3776b4];
+    @apply cursor-pointer py-3 px-2 rounded-md;
+}
+
+.button:disabled {
+    @apply bg-[#1d4369] cursor-not-allowed;
+}

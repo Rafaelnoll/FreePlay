@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { NextPage } from "next";
-import api from "../src/libs/api";
+import { loadGames } from "../src/util/load-games";
 
 import Footer from "../src/components/Footer";
 import Navbar from "../src/components/Navbar";
 import GameCardComplete from "../src/components/GameCards/GameCardComplete";
 import GameCardImageFull from "../src/components/GameCards/GameCardImageFull";
+import NextGamesButton from "../src/components/NextGamesButton";
 
 const recommendedGames = [
     {
@@ -39,21 +40,32 @@ interface GamesTypes {
 
 const Games: NextPage = () => {
     const [games, setGames] = useState([]);
-    const [totalNumberOfGames, setTotalNumberOfGames] = useState(0);
+    const [allGames, setAllGames] = useState([]);
+    const [page, setPage] = useState(0);
+    const [gamesPerPage, setGamesPerPage] = useState(30);
+
+    const handleLoadGames = async (page: number, gamesPerPage: number) => {
+        const gamesResponse = await loadGames();
+        const allGamesLoaded = gamesResponse.data;
+
+        setGames(allGamesLoaded.slice(page, gamesPerPage));
+        setAllGames(allGamesLoaded);
+    }
+
+    const loadMoreGames = () => {
+        const nextPage = page + gamesPerPage;
+        const nextGames = allGames.slice(nextPage, nextPage + gamesPerPage);
+        games.push(...nextGames);
+
+        setGames(games);
+        setPage(nextPage);
+    }
 
     useEffect(() => {
-        api.get("/games")
-            .then((response) => {
-                const allGames = response.data;
-                setTotalNumberOfGames(allGames.length);
-                //const newArrayOfGames = allGames.splice(0, 30); // Get only the 30 first games
-                //setGames(newArrayOfGames); 
-                setGames(allGames);
-            })
-            .catch((err) => {
-                console.log(err);
-            })
-    }, [])
+        handleLoadGames(0, gamesPerPage);
+    }, [gamesPerPage]);
+
+    const noMoreGames = page + gamesPerPage >= allGames.length;
 
     return (
         <>
@@ -64,7 +76,7 @@ const Games: NextPage = () => {
                     <h1 className="flex items-center text-[#A1A1AA] gap-1 text-[32px] font-[500] mb-2">
                         Best Free Games for PC and Browser In 2022!
                     </h1>
-                    <p className="text-[15px] text-[#7a8288] mb-1">{`${totalNumberOfGames} free-to-play games found in our games list!`}</p>
+                    <p className="text-[15px] text-[#7a8288] mb-1">{`${allGames.length} free-to-play games found in our games list!`}</p>
                     <div className='flex w-full md:gap-4 flex-wrap md:flex-nowrap justify-between items-center mt-6 mb-2'>
                         {recommendedGames.map((game) => {
                             return <GameCardImageFull key={game.id} imageURL={game.cardImageURL} gameURL={game.gameURL} />
@@ -84,6 +96,7 @@ const Games: NextPage = () => {
                         />
                     })}
                 </div>
+                <NextGamesButton disabled={noMoreGames} loadNext={loadMoreGames} />
             </main>
             <Footer />
         </>
