@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 import GameCard from "../GameCards/GameCard";
 import { Quotes } from "phosphor-react";
@@ -25,7 +26,7 @@ const RecommendationCard = ({ gameName, imageURL, comment, userName, gameURL }: 
                     {comment}
                 </p>
                 <div className={styles.userCommentContainer}>
-                    <img src="https://www.freetogame.com/assets/images/avatars/default/default-small.png" />
+                    <Image src="https://www.freetogame.com/assets/images/avatars/default/default-small.png" alt="Default avatar image" />
                     <span>By {userName}</span>
                 </div>
             </div>

@@ -28,7 +28,7 @@ const Navbar: NextPage = () => {
             <div className={styles.navbarContainer}>
                 <div className={styles.logoContainer}>
                     <Link href="/">
-                        <a><Image src={LogoWithName} /></a>
+                        <a><Image src={LogoWithName} alt="Logo" /></a>
                     </Link>
                 </div>
 

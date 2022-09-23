@@ -7,6 +7,7 @@ import Navbar from "../src/components/Navbar";
 import GameCardComplete from "../src/components/GameCards/GameCardComplete";
 import GameCardImageFull from "../src/components/GameCards/GameCardImageFull";
 import NextGamesButton from "../src/components/NextGamesButton";
+import SearchInput from "../src/components/SearchInput";
 
 const recommendedGames = [
     {
@@ -42,7 +43,8 @@ const Games: NextPage = () => {
     const [games, setGames] = useState([]);
     const [allGames, setAllGames] = useState([]);
     const [page, setPage] = useState(0);
-    const [gamesPerPage, setGamesPerPage] = useState(30);
+    const [searchValue, setSearchValue] = useState("");
+    const gamesPerPage = 30;
 
     const handleLoadGames = async (page: number, gamesPerPage: number) => {
         const gamesResponse = await loadGames();
@@ -67,6 +69,10 @@ const Games: NextPage = () => {
 
     const noMoreGames = page + gamesPerPage >= allGames.length;
 
+    const filtredGames = searchValue ? allGames.filter((game: GamesTypes) => {
+        return game.title.toLowerCase().includes(searchValue.toLowerCase());
+    }) : games;
+
     return (
         <>
             <Navbar />
@@ -84,8 +90,10 @@ const Games: NextPage = () => {
                     </div>
                 </div>
 
+                <SearchInput searchValue={searchValue} setSearchValue={setSearchValue} />
+
                 <div className="flex flex-wrap">
-                    {games.map((game: GamesTypes) => {
+                    {filtredGames.map((game: GamesTypes) => {
                         return <GameCardComplete
                             key={game.id}
                             name={game.title}
@@ -96,7 +104,7 @@ const Games: NextPage = () => {
                         />
                     })}
                 </div>
-                <NextGamesButton disabled={noMoreGames} loadNext={loadMoreGames} />
+                {!searchValue && <NextGamesButton disabled={noMoreGames} loadNext={loadMoreGames} />}
             </main>
             <Footer />
         </>

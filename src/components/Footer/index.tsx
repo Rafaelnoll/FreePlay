@@ -29,7 +29,7 @@ const Footer = () => {
                         <li><Link href="#"><a>Terms of use</a></Link></li>
                     </ul>
                     <div className={styles.footerLogoContainer}>
-                        <Image src={LogoFooter} />
+                        <Image src={LogoFooter} alt="Logo"/>
                     </div>
                 </div>
                 <hr />
