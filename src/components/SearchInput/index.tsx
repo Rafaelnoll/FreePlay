@@ -4,24 +4,18 @@ import styles from "./styles.module.css";
 
 interface Props {
     searchValue: string;
-    setSearchValue: (arg: string) => void;
+    handleChangeValue: (arg: any) => void;
 }
 
-const SearchInput = ({ searchValue, setSearchValue }: Props) => {
-
-    const handleChangeValue = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const newValue = e.target.value;
-        setSearchValue(newValue);
-    }
-
+const SearchInput = ({ searchValue, handleChangeValue }: Props) => {
     return (
         <div className={styles.inputContainer}>
-            <input 
-            className={styles.searchInput} 
-            type="search" name="search" 
-            value={searchValue} 
-            onChange={handleChangeValue} 
-            placeholder="Search"
+            <input
+                className={styles.searchInput}
+                type="search" name="search"
+                value={searchValue}
+                onChange={handleChangeValue}
+                placeholder="Search"
             />
         </div>
     );

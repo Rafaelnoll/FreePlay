@@ -26,7 +26,7 @@ const RecommendationCard = ({ gameName, imageURL, comment, userName, gameURL }: 
                     {comment}
                 </p>
                 <div className={styles.userCommentContainer}>
-                    <Image src="https://www.freetogame.com/assets/images/avatars/default/default-small.png" alt="Default avatar image" />
+                    <Image src="https://www.freetogame.com/assets/images/avatars/default/default-small.png" alt="Default avatar image" width={32} height={32}/>
                     <span>By {userName}</span>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { NextPage } from "next";
 import { loadGames } from "../src/util/load-games";
 
@@ -52,7 +52,7 @@ const Games: NextPage = () => {
 
         setGames(allGamesLoaded.slice(page, gamesPerPage));
         setAllGames(allGamesLoaded);
-    }
+    };
 
     const loadMoreGames = () => {
         const nextPage = page + gamesPerPage;
@@ -62,6 +62,11 @@ const Games: NextPage = () => {
         setGames(games);
         setPage(nextPage);
     }
+
+    const handleChange = (e: any) => {
+        const { value } = e.target;
+        setSearchValue(value);
+    };
 
     useEffect(() => {
         handleLoadGames(0, gamesPerPage);
@@ -90,7 +95,7 @@ const Games: NextPage = () => {
                     </div>
                 </div>
 
-                <SearchInput searchValue={searchValue} setSearchValue={setSearchValue} />
+                <SearchInput searchValue={searchValue} handleChangeValue={handleChange} />
 
                 <div className="flex flex-wrap">
                     {filtredGames.map((game: GamesTypes) => {
